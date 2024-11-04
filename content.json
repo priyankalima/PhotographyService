@@ -1,0 +1,11 @@
+{
+    "header":{
+        "logo":"logo",
+        "menu":[
+            "home",
+            "about",
+            "blog",
+            "service"
+        ]
+    }
+}

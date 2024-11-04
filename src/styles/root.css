@@ -1,0 +1,40 @@
+@import url('./header.css');
+@import url('./main.css');
+@import url('./footer.css');
+
+body{
+    background:var(--light-color);
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+.container{
+    width:90%;
+    margin:auto;
+}
+
+/* colors */
+:root{
+    --primary-color : #C8FF2D;
+    --secondary-color : #7E00FC;
+    --dark-color: #0f0f0f;
+    --light-color:#fcfcfc;
+    --grey-color:#f2f2f2;
+}
+
+/* column */
+.d-flex{
+    display:flex;
+    /* @media(max-width: 600px){
+        flex-direction: column;
+    } */
+}
+.col{
+    display:flex;
+    flex-direction: column;
+}
+/* row */
+.row{
+    display: flex;
+    flex-direction: row;
+}
