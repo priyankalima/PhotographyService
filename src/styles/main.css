@@ -19,6 +19,33 @@
             }
         }
 
+        .carousel-control{
+            display: flex;
+            gap:10px;
+            width:90%;
+            margin: auto;
+            margin-top: 30px;
+
+            input{
+                display:none;
+            }
+            label{
+                width: 7px;
+                height: 7px;
+                border: 2px solid #D9D9D9;
+                background: #D9D9D9;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+            input[type="radio"]:checked+label {
+                width: 20px;
+                height: 7px;
+                border: 2px solid var(--secondary-color);
+                border-radius: 20px;
+                background: var(--secondary-color);
+            }
+        }
+
         .d-flex {
             justify-content: space-between;
             align-items: center;
