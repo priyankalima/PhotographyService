@@ -28,11 +28,9 @@ main.appendChild(
                         `
                     });
 
-                    carouselContent.addEventListener('click',()=>{
-                        // alert('hello')
+                    carouselContent.addEventListener('touchmove',()=>{
+                        alert('hello')
                     })
-                    
-                    
                     
                 })
             })
