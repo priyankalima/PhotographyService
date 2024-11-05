@@ -8,9 +8,16 @@
             "service"
         ]
     },
-    "main":{
-        "title":"Hello This is Demo Text Section",
-        "para":"It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum",
-        "img":"./src/assets/banner-img.svg"
-    }
+    "main":[
+        {
+            "title":"Hello This is Demo Text Section",
+            "para":"It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum",
+            "img":"./src/assets/banner-img.svg"
+        },
+        {
+            "title":"Hello This is Demo Text Section Two",
+            "para":"It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum",
+            "img":"./src/assets/banner-img.svg"
+        }
+    ]
 }
