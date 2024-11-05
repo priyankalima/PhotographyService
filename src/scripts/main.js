@@ -44,7 +44,10 @@ main.appendChild(
                     const carousel = document.getElementsByClassName('carousel');
                     const element = document.getElementById("carouselContent");
                     
-                    // menual control
+                    // active first tab
+                    tabs[0].checked = true;
+
+                    // menual carousel
                     tabs.forEach((t,i)=>{
                          t.addEventListener('click',()=>{
                             if (document.getElementById('tab' + i).checked) {
@@ -54,7 +57,7 @@ main.appendChild(
                          })
                     })
 
-                    // auto slider
+                    // auto carousel
                     let counter = 0;
                     setInterval(() => {
                         counter++;
