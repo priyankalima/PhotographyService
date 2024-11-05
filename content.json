@@ -19,5 +19,13 @@
             "para":"It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum",
             "img":"./src/assets/banner-img.svg"
         }
+    ],
+    "gallery":[
+        "./src/assets/gallery/img1.svg",
+        "./src/assets/gallery/img2.svg",
+        "./src/assets/gallery/img3.svg",
+        "./src/assets/gallery/img4.svg",
+        "./src/assets/gallery/img5.svg",
+        "./src/assets/gallery/img6.svg"
     ]
 }
