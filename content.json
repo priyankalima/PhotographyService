@@ -7,5 +7,10 @@
             "blog",
             "service"
         ]
+    },
+    "main":{
+        "title":"Hello This is Demo Text Section",
+        "para":"It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum",
+        "img":"./src/assets/banner-img.svg"
     }
 }
