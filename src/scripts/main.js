@@ -138,12 +138,13 @@ main.append(
                                 <label for=${'accordion' + i}>
                                       <img src=${list.img}>
                                       <div class="text">
-                                            <span>${list.name}</span><br>
-                                            <span>${list.location}</span>
+                                            <span>${list.name}</span>
+                                            <span>From ${list.location}</span>
+                                            <span>4.5</span>
                                       </div>
                                 </label>
                                 <div class="content">
-                                   <span>${list.msg}</span><br>
+                                   <span>${list.msg}</span>
                                    <span>4.5 Ratting</span>
                                 </div>
                             </div>
