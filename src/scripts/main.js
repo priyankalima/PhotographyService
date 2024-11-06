@@ -3,16 +3,16 @@ main.append(
     Object.assign(
         document.createElement('section'),
         {
-            className:"banner",
-            id:"banner",
+            className: "banner",
+            id: "banner",
             innerHTML: `
             
                 <div class="carousel-content" id="carouselContent"></div>
                 <div class="carousel-control" id="carouselControl"></div>
            
             `,
-            function: addEventListener("load",()=>{
-                fetch('./content.json').then(res=>res.json()).then(data=>{
+            function: addEventListener("load", () => {
+                fetch('./content.json').then(res => res.json()).then(data => {
                     const item = data.main;
                     // carousel content
                     item.forEach(e => {
@@ -32,7 +32,7 @@ main.append(
                     });
 
                     //carousel control
-                    for(let i = 0; i < 2 ; i++){
+                    for (let i = 0; i < 2; i++) {
                         carouselControl.innerHTML += `
                         <input type="radio" name="tab" id=${'tab' + i}>
                         <label for=${'tab' + i} id="label"></label>
@@ -43,18 +43,18 @@ main.append(
                     const tabs = document.getElementsByName('tab');
                     const carousel = document.getElementsByClassName('carousel');
                     const element = document.getElementById("carouselContent");
-                    
+
                     // active first tab
                     tabs[0].checked = true;
 
                     // menual carousel
-                    tabs.forEach((t,i)=>{
-                         t.addEventListener('click',()=>{
+                    tabs.forEach((t, i) => {
+                        t.addEventListener('click', () => {
                             if (document.getElementById('tab' + i).checked) {
                                 const scrollPosition = carousel[i].offsetLeft;
                                 element.scrollTo(scrollPosition, 0);
                             }
-                         })
+                        })
                     })
 
                     // auto carousel
@@ -66,7 +66,7 @@ main.append(
                         }
                         document.getElementById('tab' + counter).checked = true;
                         const scrollPosition = carousel[counter].offsetLeft;
-                        element.scrollTo(scrollPosition,0);
+                        element.scrollTo(scrollPosition, 0);
                     }, 5000)
                 })
             })
@@ -77,21 +77,20 @@ main.append(
     Object.assign(
         document.createElement('section'),
         {
-            className:"gallery-wrapper",
-            id:'galleryWrapper',
-            function:addEventListener('load',()=>{
-                fetch('./content.json').then(res=>res.json()).then(data=>{
+            className: "gallery-wrapper",
+            id: 'galleryWrapper',
+            function: addEventListener('load', () => {
+                fetch('./content.json').then(res => res.json()).then(data => {
                     const item = data.gallery;
-                    
+
                     galleryWrapper.innerHTML = `
                        <div class="container gallery">
                             <div class="title">Beauty of Pictures</div>
                             <div class="gallery-img">
-                                ${
-                                    item.map(img=>{
-                                        return `<div><img src=${img}></div>`
-                                    }).join("")
-                                }
+                                ${item.map(img => {
+                        return `<div><img src=${img}></div>`
+                    }).join("")
+                        }
                             </div>
                             <div class="explore-btn">
                                <button>Explore  
@@ -110,9 +109,9 @@ main.append(
     Object.assign(
         document.createElement('section'),
         {
-            className:'testiml',
-            id:'testiml',
-            innerHTML:`
+            className: 'testiml',
+            id: 'testiml',
+            innerHTML: `
              <div class="container d-flex">
                  <div class="left-img" id="leftImg"></div>
                  <div class="right-content" id="rightContent">
@@ -121,8 +120,8 @@ main.append(
                  </div>
              </div>
             `,
-            function:addEventListener('load',()=>{
-                fetch('./content.json').then(res=>res.json()).then(data=>{
+            function: addEventListener('load', () => {
+                fetch('./content.json').then(res => res.json()).then(data => {
                     const item = data.testimonial;
                     leftImg.innerHTML = `
                      <img src=${item.img}>
@@ -131,7 +130,7 @@ main.append(
                     <span>Testimonial :</span>
                     <span>They say what they feel!</span>`
 
-                    item.tstml.forEach((list,i)=>{
+                    item.tstml.forEach((list, i) => {
                         accordion.innerHTML += `
                         <div class="accordion-list">
                             <div class="accordion-content">
@@ -143,7 +142,10 @@ main.append(
                                             <span>${list.location}</span>
                                       </div>
                                 </label>
-                                <div class="content">${list.msg}</div>
+                                <div class="content">
+                                   <span>${list.msg}</span><br>
+                                   <span>4.5 Ratting</span>
+                                </div>
                             </div>
                           </div>
                         `
