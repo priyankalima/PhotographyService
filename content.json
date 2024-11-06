@@ -27,5 +27,29 @@
         "./src/assets/gallery/img4.svg",
         "./src/assets/gallery/img5.svg",
         "./src/assets/gallery/img6.svg"
-    ]
+    ],
+    "testimonial":{
+        "tstml":[
+            {
+                "img":"./src/assets/testimonial/profiles/img1.svg",
+                "name":"Jessic J",
+                "location":"Phillipine",
+                "msg":"Really happy with service,my all pics are capture with clear and catchy images."
+            },
+            {
+                "img":"./src/assets/testimonial/profiles/img2.svg",
+                "name":"Riyal Dev",
+                "location":"Mumbai",
+                "msg":"Awesome caputre and have a expert to guide a pose with catchy look"
+            },
+            {
+                "img":"./src/assets/testimonial/profiles/img3.svg",
+                "name":"Elson Div",
+                "location":"USA",
+                "msg":"I really recommended for this. photography is to capure the moment with the fun pose"
+            }
+        ],
+        "img":"./src/assets/testimonial/testiml-side-img.svg"
+
+    }
 }

@@ -106,5 +106,51 @@ main.append(
         }
     ),
 
-    // 
+    // testimonial section
+    Object.assign(
+        document.createElement('section'),
+        {
+            className:'testiml',
+            id:'testiml',
+            innerHTML:`
+             <div class="container d-flex">
+                 <div class="left-img" id="leftImg"></div>
+                 <div class="right-content" id="rightContent">
+                    <div class="title" id="title"></div>
+                    <div class="accordion" id="accordion"></div>
+                 </div>
+             </div>
+            `,
+            function:addEventListener('load',()=>{
+                fetch('./content.json').then(res=>res.json()).then(data=>{
+                    const item = data.testimonial;
+                    leftImg.innerHTML = `
+                     <img src=${item.img}>
+                    `
+                    title.innerHTML = `
+                    <span>Testimonial :</span>
+                    <span>They say what they feel!</span>`
+
+                    item.tstml.forEach((list,i)=>{
+                        accordion.innerHTML += `
+                        <div class="accordion-list">
+                            <div class="accordion-content">
+                                <input type="radio" name="accordion" id=${'accordion' + i}>
+                                <label for=${'accordion' + i}>
+                                      <img src=${list.img}>
+                                      <div class="text">
+                                            <span>${list.name}</span><br>
+                                            <span>${list.location}</span>
+                                      </div>
+                                </label>
+                                <div class="content">${list.msg}</div>
+                            </div>
+                          </div>
+                        `
+                        document.getElementsByName('accordion')[0].checked = true;
+                    })
+                })
+            })
+        }
+    )
 )
