@@ -139,7 +139,7 @@ main.append(
                                       <img src=${list.img}>
                                       <div class="text">
                                             <span>${list.name}</span>
-                                            <span>From ${list.location}</span>
+                                            <span>From ${list.location}</span><br>
                                             <span>4.5</span>
                                       </div>
                                 </label>
@@ -152,6 +152,26 @@ main.append(
                         `
                         document.getElementsByName('accordion')[0].checked = true;
                     })
+                })
+            })
+        }
+    ),
+
+    // faq section
+    Object.assign(
+        document.createElement('section'),
+        {
+            className:'faq-section',
+            id:'faqSection',
+            innerHTML:`
+              <div class="container">
+                  <div class="left-content" id="leftContent"></div>
+                  <div class="right-img" id="rightImg"></div>
+              </div>
+            `,
+            function:addEventListener('load',()=>{
+                fetch('./content.json').then(res=>res.json()).then(data=>{
+                    const item = data.faq;
                 })
             })
         }
