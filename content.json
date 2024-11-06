@@ -51,7 +51,8 @@
         ],
         "img":"./src/assets/testimonial/testiml-side-img.svg"
     },
-    "faq":[
+    "faq":{
+        "faqList":[
         {
             "title":"What is the cost for all photo capture ?",
             "text":"It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
@@ -72,5 +73,7 @@
             "title":"What is the cost for all photo capture ?",
             "text":"It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
         }
-    ]
+    ],
+    "img":"./src/assets/faq-side-img.svg"
+}
 }

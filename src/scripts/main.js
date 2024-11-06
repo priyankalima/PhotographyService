@@ -164,14 +164,32 @@ main.append(
             className:'faq-section',
             id:'faqSection',
             innerHTML:`
-              <div class="container">
-                  <div class="left-content" id="leftContent"></div>
+              <div class="container d-flex">
+                  <div class="left-content" id="leftContent">
+                       <div class="tab-content" id="tabContent"></div>
+                  </div>
                   <div class="right-img" id="rightImg"></div>
               </div>
             `,
             function:addEventListener('load',()=>{
                 fetch('./content.json').then(res=>res.json()).then(data=>{
                     const item = data.faq;
+
+                    item.faqList.forEach((list,i)=>{
+                        tabContent.innerHTML += `
+                            <input type="radio" id=${'faqTab' + i} name="faqTab" >
+                            <label for=${'faqTab' + i}>${i+1}</label>
+                            <div class="content">
+                                <span>${list.title}</span><br>
+                                <span>${list.text}</span>
+                            </div> 
+                        `
+                        document.getElementsByName('faqTab')[0].checked = true;
+                    })
+
+                    rightImg.innerHTML = `
+                      <img src=${item.img}>
+                    `
                 })
             })
         }
