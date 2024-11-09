@@ -281,5 +281,57 @@ main.append(
              })
        })
     }
+    ),
+
+    // footer section
+    Object.assign(
+        document.createElement('section'),
+        {
+            className:"footer-section",
+            id:"footerSection",
+            innerHTML:`
+              <div class="container d-flex">
+                 <div class="newsletter-form" id="newsLetterForm"></div>
+                 <div class="quick-links" id="quickLink"></div>
+              </div>
+              <div class="copyright container">
+                 <span>copyright @ 2024</span>
+              </div>
+            `,
+            function:addEventListener("load",()=>{
+                fetch('./content.json').then(res=>res.json()).then(data=>{
+                    const item = data.footer;
+
+                    newsLetterForm.innerHTML=`
+                       <div class="title">
+                          <span>Subscribe to our Newsletter</span>
+                       </div>
+                       <div class="subscription-form">
+                           <input type="text" placeholder="enter your email">
+                           <button type="submit">Subscribe</button>
+                       </div>
+                    `
+                    quickLink.innerHTML = `
+                        <div class="quicklink-address">
+                              <span>LOGO</span>
+                              <span>${item.para}</span>
+                              ${
+                                item.address.map(list=>{
+                                    return `<a href="">${list}</a>`
+                                }).join("")
+                              }
+                        </div>
+                        <div class="quicklink-links">
+                            <span>Quick Link</span>
+                            ${
+                            item.links.map(list=>{
+                                return `<a href="">${list}</a>`
+                            }).join("")
+                            }
+                        </div>
+                    `
+                })
+            })
+        }
     )
 )

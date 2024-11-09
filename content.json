@@ -89,5 +89,19 @@
             "title":"How to build a proffesional as Photographer?",
             "img":"https://piceapp.com/blogs/wp-content/uploads/2024/05/Photography-Videography-Services.jpg"
         }
-    ]
+    ],
+    "footer":{
+        "logo":"",
+        "para":"Awsm car ,i really so happy that a branded car gives much smooth driving sensor.",
+        "address":[
+            "HSR Layout,KA,298007,Ka,India",
+            "+91 000-3456-23456",
+            "contact@areta.in"
+        ],
+        "links":[
+            "About",
+            "Blog",
+            "Service"
+        ]
+    }
 }

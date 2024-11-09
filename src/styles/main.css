@@ -526,7 +526,7 @@
                     object-fit: cover;
                     @media(max-width:600px){
                         width:300px;
-                        height:250px;
+                        height:350px;
                     }
                 }
                 .gradient{
@@ -536,7 +536,7 @@
                     background: linear-gradient(179deg, rgba(23, 23, 23, 0.05) 0%, rgba(23, 23, 23, 0.86) 93.4%);
                     @media(max-width:600px){
                         width:300px;
-                        height:250px;
+                        height:350px;
                     }
                 }
                 span,button{
@@ -580,5 +580,125 @@
         .bottom-content::-webkit-scrollbar{
             display: none;
         }
+    }
+
+    /* footer styling */
+    .footer-section{
+        width:100%;
+        height:auto;
+        padding:60px 0;
+
+        .d-flex{
+            gap:50px;
+            @media(max-width:600px){
+                flex-direction: column;
+            }
+        }
+
+        .newsletter-form{
+            display: flex;
+            flex-direction: column;
+            gap:30px;
+            .title{
+                span{
+                 font-family: var(--font-family);
+                 font-weight: 400;
+                 font-size: 48px;
+                 letter-spacing: 0.02em;
+                 color: #0e0e0e;
+                 @media(max-width:600px){
+                     font-size: 32px;
+                 }
+                }
+             }
+             .subscription-form{
+                display:flex;
+                gap:10px;
+                input{
+                 border: 0.50px solid rgba(14, 14, 14, 0.6);
+                 padding:10px;
+                 font-family: var(--font-family);
+                 font-weight: 400;
+                 font-size: 14px;
+                 letter-spacing: 0.02em;
+                 color: #484545;
+                 width:100%;
+                }
+                button{
+                    padding:5px 15px;
+                    border:none;
+                    background:var(--secondary-color);
+                    font-family: var(--font-family);
+                    font-weight: 500;
+                    font-size: 14px;
+                    letter-spacing: 0.02em;
+                    color: var(--light-color);
+                }
+             }
+        }
+        .quick-links{
+            display:flex;
+            gap:50px;
+            width:100%;
+            .quicklink-address{
+                width:100%;
+                display: flex;
+                flex-direction: column;
+                gap:20px;
+
+                span{
+                    font-family: var(--font-family);
+                    font-weight: 400;
+                    font-size: 16px;
+                    letter-spacing: 0.02em;
+                    color: rgba(14, 14, 14, 0.5);
+                }
+                span:first-child{
+                    color:var(--dark-color);
+                    font-weight: 600;
+                }
+                a{
+                    text-decoration: none;
+                    font-family: var(--font-family);
+                    font-weight: 400;
+                    font-size: 16px;
+                    letter-spacing: 0.02em;
+                    color: rgba(14, 14, 14, 0.7);
+                }
+            }
+            .quicklink-links{
+                width:60%;
+                display: flex;
+                flex-direction: column;
+                gap:20px;
+
+                span{
+                    font-family: var(--font-family);
+                    font-weight: 600;
+                    font-size: 16px;
+                    letter-spacing: 0.02em;
+                    color: var(--dark-color);
+                }
+                a{
+                    text-decoration: none;
+                    font-family: var(--font-family);
+                    font-weight: 400;
+                    font-size: 16px;
+                    letter-spacing: 0.02em;
+                    color: rgba(14, 14, 14, 0.7);
+                }
+            }
+         }
+         .copyright{
+            margin-top: 30px;
+            span{
+                font-family: var(--font-family);
+                font-weight: 400;
+                font-size: 16px;
+                letter-spacing: 0.02em;
+                color: rgba(41, 40, 40, 0.7);
+            }
+         }
+        
     }
 }
