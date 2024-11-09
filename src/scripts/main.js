@@ -43,7 +43,8 @@ main.append(
                     const tabs = document.getElementsByName('tab');
                     const carousel = document.getElementsByClassName('carousel');
                     const element = document.getElementById("carouselContent");
-
+                     
+                    // console.log(carousel)
                     // active first tab
                     tabs[0].checked = true;
 
@@ -166,27 +167,62 @@ main.append(
             innerHTML:`
               <div class="container d-flex">
                   <div class="left-content" id="leftContent">
-                       <div class="tab-content" id="tabContent"></div>
+                       <div class="tabs">
+                           <div class="title">
+                               <span>FAQ :</span>
+                               <span>To get know more makes more interesting!</span>
+                           </div>
+                           <div class="tab-content" id="tabContent"></div>
+                           <div class="tab-control" id="tabControl"></div>
+                       </div>
                   </div>
-                  <div class="right-img" id="rightImg"></div>
+                  <div class="right-img" id="rightImg">helo</div>
               </div>
             `,
             function:addEventListener('load',()=>{
                 fetch('./content.json').then(res=>res.json()).then(data=>{
                     const item = data.faq;
-
+                    
                     item.faqList.forEach((list,i)=>{
                         tabContent.innerHTML += `
-                            <input type="radio" id=${'faqTab' + i} name="faqTab" >
-                            <label for=${'faqTab' + i}>${i+1}</label>
-                            <div class="content">
+                            <div class="faq-content">
                                 <span>${list.title}</span><br>
                                 <span>${list.text}</span>
                             </div> 
                         `
+                        tabControl.innerHTML += `
+                            <div class="controls">
+                                <input type="radio" id=${'faqTab' + i} name="faqTab" >
+                                <label for=${'faqTab' + i}>${i+1}</label>
+                            </div>
+                        `
                         document.getElementsByName('faqTab')[0].checked = true;
                     })
+                   
+                    // defined tab and content
+                    const contentList = document.querySelectorAll('.faq-content');
+                    const controlTab = document.getElementsByName('faqTab');
 
+                    // show related contents while tabs
+                    controlTab.forEach((item,i)=>{
+                         // active first tab when others tabs are not
+                        if(controlTab[0].checked){
+                            contentList[0].style.display = "block";
+                        }
+                        // deactive all tab when one tab will active
+                        if(!controlTab[i].checked){
+                            contentList[i].style.display = "none";
+                        }
+                        // show content while tab
+                        item.addEventListener('click',()=>{
+                            contentList.forEach((content => {
+                                content.style.display = "none"
+                            }))
+                            contentList[i].style.display = "block";
+                        })
+
+                    })
+                    
                     rightImg.innerHTML = `
                       <img src=${item.img}>
                     `

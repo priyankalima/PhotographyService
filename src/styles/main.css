@@ -339,48 +339,100 @@
 
         .d-flex{
             gap:30px;
+
+            @media(max-width:600px){
+                flex-direction: column;
+            }
         }
         .left-content{
             width:100%;
 
-            .tab-content{
-                display:flex;
-                flex-wrap: wrap;
-                gap:20px;
-                width:100%;
-                
-            }
-            input{
-                display:none;
-            }
-            label{
-                cursor:pointer;
-                width:30px;
-                height:30px;
-                border-radius: 50%;
-                background-color: #f2f2f2;
-                display: flex;
-                justify-content: center;
-                align-content: center;
-                align-items: center;
-            }
-            .content{
-                order: 1;
-                width:100%;
-                background:#f2f2f2;
-                padding:20px;
-                display:none;
-            }
+            .tabs{
+                /* background:green; */
+                .title{
+                    margin-bottom: 30px;
+                    span{
+                        font-family: var(--font-family);
+                        font-weight: 400;
+                        font-size: 48px;
+                        letter-spacing: 0.02em;
+                        @media(max-width:600px){
+                            font-size: 32px;
+                        }
+                    }
+                    span:first-child{
+                        color: var(--secondary-color);
+                    }
+                    span:last-child{
+                        color: var(--dark-color);
+                    }
+                }
 
-            input[type="radio"]:checked+label {
-                color: var(--light-color);
-                background: var(--secondary-color);
-                /* font-weight: 700; */
-            }
-            input[type="radio"]:checked+label+.content {
-                display: block;
-            }
+                .tab-content{
+                    display:flex;
+                    flex-direction: column;
+                    gap:20px;
 
+
+
+                    
+                    .active{
+                        display:block;
+                    }
+                    .faq-content{
+                        padding:10px;
+                        background:var(--grey-color);
+                        /* display:flex; */
+                        flex-direction: column;
+                        /* gap:20px; */
+                        /* display:none; */
+                        
+
+                        span{
+                            font-family: var(--second-family);
+                            font-weight: 600;
+                            font-size: 16px;
+                            letter-spacing: 0.02em;
+                            color: #000;
+                        }
+                        span:last-child{
+                            font-family: var(--second-family);
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 180%;
+                            letter-spacing: 0.02em;
+                            color: rgba(0, 0, 0, 0.7);
+                        }
+                    }
+                }
+
+                .tab-control{
+                    display:flex;
+                    margin-top: 30px;
+                    gap:20px;
+
+                    input{
+                        display:none;
+                    }
+
+                    label{
+                        display:flex;
+                        width:40px;
+                        height:40px;
+                        background: var(--grey-color);
+                        border-radius: 50%;
+                        align-items: center;
+                        /* align-content: center; */
+                        justify-content: center;
+                        cursor: pointer;
+                    }
+
+                    input[type="radio"]:checked + label{
+                        background:var(--dark-color);
+                        color:var(--light-color);
+                    }
+                }
+            }
         }
         .right-img{
             @media(max-width:600px){
