@@ -185,7 +185,7 @@ main.append(
                     
                     item.faqList.forEach((list,i)=>{
                         tabContent.innerHTML += `
-                            <div class="faq-content">
+                            <div class="faq-content d-flex">
                                 <span>${list.title}</span><br>
                                 <span>${list.text}</span>
                             </div> 
@@ -207,7 +207,7 @@ main.append(
                     controlTab.forEach((item,i)=>{
                          // active first tab when others tabs are not
                         if(controlTab[0].checked){
-                            contentList[0].style.display = "block";
+                            contentList[0].style.display = "flex";
                         }
                         // deactive all tab when one tab will active
                         if(!controlTab[i].checked){
@@ -218,7 +218,7 @@ main.append(
                             contentList.forEach((content => {
                                 content.style.display = "none"
                             }))
-                            contentList[i].style.display = "block";
+                            contentList[i].style.display = "flex";
                         })
 
                     })
@@ -230,4 +230,6 @@ main.append(
             })
         }
     )
+
+    // blog section
 )

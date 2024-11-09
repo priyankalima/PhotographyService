@@ -373,21 +373,14 @@
                     flex-direction: column;
                     gap:20px;
 
-
-
-                    
-                    .active{
-                        display:block;
-                    }
+ 
                     .faq-content{
-                        padding:10px;
-                        background:var(--grey-color);
-                        /* display:flex; */
+                        padding:30px;
+                        background:#ffffff;
+                        box-shadow: 5px 5px 12px 4px rgba(244, 241, 241, 0.5);
+                        gap:5px;
                         flex-direction: column;
-                        /* gap:20px; */
-                        /* display:none; */
                         
-
                         span{
                             font-family: var(--second-family);
                             font-weight: 600;
