@@ -229,7 +229,57 @@ main.append(
                 })
             })
         }
-    )
+    ),
 
     // blog section
+    Object.assign(
+    // create section
+    document.createElement('section'),
+    {
+       className : "blog-section",
+       id:'blogSection',
+       innerHTML:`
+          <div class="d-flex">
+              <div class="top-title" id="topTitle"></div>
+              <div class="bottom-content" id="bottomContent"></div>
+          </div>
+       `,
+       function: addEventListener('load',()=>{
+             fetch('./content.json').then(res=>res.json()).then(data=>{
+                const item = data.blog;
+                topTitle.innerHTML = `
+                    <div class="container d-flex">
+                       <div class="heading-title">
+                            <span>Blog :</span>
+                            <span>know more updates and tricks</span>
+                        </div>
+                        <div class="scroll-btn">
+                            <button>
+                                <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.97744 0.847268C9.18834 1.05824 9.30682 1.34433 9.30682 1.64264C9.30682 1.94095 9.18834 2.22705 8.97744 2.43802L3.40869 8.00677L8.97744 13.5755C9.18237 13.7877 9.29576 14.0719 9.2932 14.3668C9.29063 14.6618 9.17232 14.944 8.96373 15.1526C8.75515 15.3611 8.47299 15.4795 8.17802 15.482C7.88304 15.4846 7.59887 15.3712 7.38669 15.1663L1.02256 8.80214C0.811659 8.59117 0.693179 8.30508 0.693179 8.00677C0.693179 7.70846 0.811659 7.42236 1.02256 7.21139L7.38669 0.847268C7.59766 0.636363 7.88375 0.517883 8.18206 0.517883C8.48037 0.517883 8.76647 0.636363 8.97744 0.847268Z" fill="black" />
+                                </svg>
+                            </button>
+                            <button>
+                                <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.02256 0.847268C0.811656 1.05824 0.693176 1.34433 0.693176 1.64264C0.693176 1.94095 0.811656 2.22705 1.02256 2.43802L6.59131 8.00677L1.02256 13.5755C0.817633 13.7877 0.704239 14.0719 0.706802 14.3668C0.709366 14.6618 0.827681 14.944 1.03627 15.1526C1.24485 15.3611 1.52701 15.4795 1.82198 15.482C2.11696 15.4846 2.40113 15.3712 2.61331 15.1663L8.97744 8.80214C9.18834 8.59117 9.30682 8.30508 9.30682 8.00677C9.30682 7.70846 9.18834 7.42236 8.97744 7.21139L2.61331 0.847268C2.40234 0.636363 2.11625 0.517883 1.81794 0.517883C1.51963 0.517883 1.23353 0.636363 1.02256 0.847268Z" fill="white" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                `
+                // show the scroll contents
+                item.forEach(list=>{
+                    bottomContent.innerHTML += `
+                       <div class="scroll-container">
+                            <img src=${list.img} alt="img">
+                            <div class="gradient"></div>
+                            <span>${list.title}</span>
+                            <button>know more</button>
+                       </div>
+                    `
+                })
+             })
+       })
+    }
+    )
 )
