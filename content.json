@@ -10,12 +10,12 @@
     },
     "main": [
         {
-            "title": "Hello This is Demo Text Section",
+            "title": "Photography leading the beauty of moments",
             "para": "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum",
             "img": "./src/assets/banner-img.svg"
         },
         {
-            "title": "Hello This is Demo Text Section Two",
+            "title": "Photography leading the beauty of moments",
             "para": "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum",
             "img": "./src/assets/banner-img.svg"
         }
