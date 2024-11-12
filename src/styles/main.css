@@ -133,9 +133,14 @@
             }
 
             img {
-                flex-grow: 1;
-                width: 100%;
+                /* flex-grow: 1; */
+                width: 360px;
+                height:300px;
+                object-fit:cover;
             }
+            /* img:nth-child(2){
+                width:300px;
+            } */
 
             .explore-btn {
                 display: flex;

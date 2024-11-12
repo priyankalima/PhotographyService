@@ -89,7 +89,7 @@ main.append(
                             <div class="title">Beauty of Pictures</div>
                             <div class="gallery-img">
                                 ${item.map(img => {
-                        return `<div><img src=${img}></div>`
+                        return `<img src=${img}>`
                     }).join("")
                         }
                             </div>
