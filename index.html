@@ -1,21 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Title -->
-    <title>Photography Service</title>
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="./index.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Title -->
+  <title>Photography Service</title>
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="src/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
+
 <body>
-    <!-- Header -->
-    <header id="header" class="header"></header>
-    <!-- Main page -->
-    <main id="main" class="main"></main>
-    <!-- Footer -->
-    <footer id="footer" class="footer"></footer>
-    <!-- Javascript -->
-    <script src="./index.js"></script>
+  <!-- Header -->
+  <header id="header" class="header"></header>
+  <!-- Main page -->
+  <main class="main">
+    <section class="banner">
+      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner" id="carouselInner"></div>
+        <div class="carousel-indicators">
+          <div class="container" id="carouselIndicator">
+
+          </div>
+        </div>
+      </div>
+      <script>
+        const carouselData = [
+          {
+            "title": "Photography leading the beauty of moments",
+            "text": "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum",
+            "img": "/src/assets/banner-img.svg"
+          },
+          {
+            "title": "Capture high quality for your experience",
+            "text": "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum",
+            "img": "/src/assets/banner-img.svg"
+          }
+        ]
+
+        carouselData.forEach((item, i) => {
+          carouselInner.innerHTML += `
+                <div class="carousel-item">
+                  <div class="container d-flex">
+                      <div class="left-content">
+                          <span class="title"> ${item.title}</span>
+                          <span class="text">${item.text}</span>
+                      </div>
+                      <div class="right-img">
+                          <img src=${item.img}>
+                      </div>
+                    </div>
+                </div>
+              `
+          carouselIndicator.innerHTML += `
+              <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to=${i} class="indicatore"></button>
+              `
+        })
+        document.querySelectorAll('.carousel-item')[0].classList.add('active');
+        document.querySelectorAll('.indicatore')[0].classList.add('active');
+      </script>
+    </section>
+
+    <section class="gallery">
+      <div class="container">
+        <h2>Beauty of pictures</h2>
+        <div class="row mt-4" id="galleryItems"></div>
+        <div class="explore-btn">
+          <button>Explore
+            <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M0.522561 0.847268C0.311656 1.05824 0.193176 1.34433 0.193176 1.64264C0.193176 1.94095 0.311656 2.22705 0.522561 2.43802L6.09131 8.00677L0.522561 13.5755C0.317633 13.7877 0.204239 14.0719 0.206802 14.3668C0.209366 14.6618 0.327681 14.944 0.536265 15.1526C0.744849 15.3611 1.02701 15.4795 1.32198 15.482C1.61696 15.4846 1.90113 15.3712 2.11331 15.1663L8.47744 8.80214C8.68834 8.59117 8.80682 8.30508 8.80682 8.00677C8.80682 7.70846 8.68834 7.42236 8.47744 7.21139L2.11331 0.847268C1.90234 0.636363 1.61625 0.517883 1.31794 0.517883C1.01963 0.517883 0.73353 0.636363 0.522561 0.847268Z"
+                fill="white" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <script>
+        const galleryContent = [
+          "./src/assets/gallery/img1.svg",
+          "./src/assets/gallery/img2.svg",
+          "./src/assets/gallery/img3.svg",
+          "https://gratisography.com/wp-content/uploads/2024/01/gratisography-covered-in-confetti-800x525.jpg",
+          "./src/assets/gallery/img5.svg",
+          "./src/assets/gallery/img6.svg"
+        ]
+        galleryContent.forEach(item => {
+          galleryItems.innerHTML += `
+            <div class="col-sm-4">
+               <div class="gallery-items">
+                   <img src=${item}>
+                </div>  
+            </div>
+            `
+        })
+      </script>
+    </section>
+
+    <section class="testimonial">
+      <div class="container d-flex">
+        <div class="left-img">
+          <img src="./src/assets/testimonial/testiml-side-img.svg">
+        </div>
+        <div class="right-content" id="rightContent">
+          <div class="title">
+            <span>Testimonial :</span>
+            <span>They say what they feel!</span>
+          </div>
+          <div class="accordion" id="accordion"></div>
+        </div>
+      </div>
+      <script>
+        const testimonialContent = [
+          {
+            "img": "./src/assets/testimonial/profiles/img1.svg",
+            "name": "Jessic J",
+            "location": "Phillipine",
+            "msg": "Really happy with service,my all pics are capture with clear and catchy images."
+          },
+          {
+            "img": "./src/assets/testimonial/profiles/img2.svg",
+            "name": "Riyal Dev",
+            "location": "Mumbai",
+            "msg": "Awesome caputre and have a expert to guide a pose with catchy look"
+          },
+          {
+            "img": "./src/assets/testimonial/profiles/img3.svg",
+            "name": "Elson Div",
+            "location": "USA",
+            "msg": "I really recommended for this. photography is to capure the moment with the fun pose"
+          }
+        ]
+        testimonialContent.forEach((list, i) => {
+          accordion.innerHTML += `
+          <div class="accordion-list">
+              <div class="accordion-content">
+                  <input type="radio" name="accordion" id=${'accordion' + i}>
+                  <label for=${'accordion' + i}>
+                  <img src=${list.img}>
+                  <div class="text">
+                      <span>${list.name}</span>
+                      <span>From ${list.location}</span><br>
+                      <span>4.5</span>
+                  </div>
+                  </label>
+                  <div class="content">
+                      <span>${list.msg}</span>
+                      <span>4.5 Ratting</span>
+                  </div>
+              </div>
+          </div>
+          `
+          document.getElementsByName('accordion')[0].checked = true;
+        })
+      </script>
+    </section>
+
+    <section class="faq">
+      <div class="container d-flex">
+        <div class="left-content" id="leftContent">
+          <div class="tabs">
+            <div class="title">
+              <span>FAQ :</span>
+              <span>To get know more makes more interesting!</span>
+            </div>
+            <div class="tab-content" id="tabContent"></div>
+            <div class="tab-control" id="tabControl"></div>
+          </div>
+        </div>
+        <div class="right-img">
+          <img src="./src/assets/faq-side-img.svg">
+        </div>
+      </div>
+      <script>
+        const faqList = [
+          {
+            "title": "What is the cost for all photo capture ? one",
+            "text": "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+          },
+          {
+            "title": "What is the cost for all photo capture ? two",
+            "text": "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+          },
+          {
+            "title": "What is the cost for all photo capture ? three",
+            "text": "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+          },
+          {
+            "title": "What is the cost for all photo capture ? four",
+            "text": "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+          },
+          {
+            "title": "What is the cost for all photo capture ? five",
+            "text": "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+          }
+        ]
+        faqList.forEach((list, i) => {
+          tabContent.innerHTML += `
+          <div class="faq-content">
+              <span>${list.title}</span><br>
+              <span>${list.text}</span>
+          </div> 
+          `
+          tabControl.innerHTML += `
+          <div class="controls">
+              <input type="radio" id=${'faqTab' + i} name="faqTab" >
+              <label for=${'faqTab' + i}>${i + 1}</label>
+          </div>
+          `
+          document.getElementsByName('faqTab')[0].checked = true;
+          document.querySelectorAll('.faq-content')[0].style.display = "flex";
+        })
+        // defined tab and content
+        const contentList = document.querySelectorAll('.faq-content');
+        const controlTab = document.getElementsByName('faqTab');
+        // show related contents while tabs
+        controlTab.forEach((item, i) => {
+          item.addEventListener('click', () => {
+            contentList.forEach((content => {
+              content.style.display = "none"
+            }))
+            contentList[i].style.display = "flex";
+          })
+        })
+      </script>
+    </section>
+
+    <section class="blog">
+      <div class=" d-flex">
+        <div class="top-title container d-flex">
+          <div class="heading-title">
+            <span>Blog :</span>
+            <span>know more updates and tricks</span>
+          </div>
+          <div class="scroll-btn">
+            <button>
+              <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.97744 0.847268C9.18834 1.05824 9.30682 1.34433 9.30682 1.64264C9.30682 1.94095 9.18834 2.22705 8.97744 2.43802L3.40869 8.00677L8.97744 13.5755C9.18237 13.7877 9.29576 14.0719 9.2932 14.3668C9.29063 14.6618 9.17232 14.944 8.96373 15.1526C8.75515 15.3611 8.47299 15.4795 8.17802 15.482C7.88304 15.4846 7.59887 15.3712 7.38669 15.1663L1.02256 8.80214C0.811659 8.59117 0.693179 8.30508 0.693179 8.00677C0.693179 7.70846 0.811659 7.42236 1.02256 7.21139L7.38669 0.847268C7.59766 0.636363 7.88375 0.517883 8.18206 0.517883C8.48037 0.517883 8.76647 0.636363 8.97744 0.847268Z"
+                  fill="black" />
+              </svg>
+            </button>
+            <button>
+              <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M1.02256 0.847268C0.811656 1.05824 0.693176 1.34433 0.693176 1.64264C0.693176 1.94095 0.811656 2.22705 1.02256 2.43802L6.59131 8.00677L1.02256 13.5755C0.817633 13.7877 0.704239 14.0719 0.706802 14.3668C0.709366 14.6618 0.827681 14.944 1.03627 15.1526C1.24485 15.3611 1.52701 15.4795 1.82198 15.482C2.11696 15.4846 2.40113 15.3712 2.61331 15.1663L8.97744 8.80214C9.18834 8.59117 9.30682 8.30508 9.30682 8.00677C9.30682 7.70846 9.18834 7.42236 8.97744 7.21139L2.61331 0.847268C2.40234 0.636363 2.11625 0.517883 1.81794 0.517883C1.51963 0.517883 1.23353 0.636363 1.02256 0.847268Z"
+                  fill="white" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="bottom-content" id="bottomContent"></div>
+      </div>
+      <script>
+        const blogContent = [
+          {
+            "title": "What's need in photogrpahy?",
+            "img": "https://st.depositphotos.com/1065022/2890/i/450/depositphotos_28906239-stock-photo-beautiful-girl-with-bouquet-of.jpg"
+          },
+          {
+            "title": "Nature lies in beauty of photography",
+            "img": "https://images.news18.com/ibnlive/uploads/2021/08/sun-photo-16293134144x3.jpg"
+          },
+          {
+            "title": "How to build a proffesional as Photographer?",
+            "img": "https://piceapp.com/blogs/wp-content/uploads/2024/05/Photography-Videography-Services.jpg"
+          }
+        ]
+
+        // show the scroll contents
+        blogContent.forEach(list => {
+          bottomContent.innerHTML += `
+            <div class="scroll-container">
+                <img src=${list.img} alt="img">
+                <div class="gradient"></div>
+                <span>${list.title}</span>
+                <button>know more</button>
+            </div>
+          `
+        })
+      </script>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer id="footer" class="footer"></footer>
+  <!-- Javascript -->
+  <script src="/src/script.js"></script>
 </body>
+
 </html>
