@@ -243,9 +243,12 @@ body {
                     font-size: 68px;
                     letter-spacing: 0.02em;
                     line-height: 2ch;
-                    animation:pulse; /* referring directly to the animation's @keyframe declaration */
-                    animation-duration: 2s; /* don't forget to set a duration! */
+                    animation: pulse;
+                    /* referring directly to the animation's @keyframe declaration */
+                    animation-duration: 2s;
+                    /* don't forget to set a duration! */
                     animation-delay: 5s;
+
                     @media(max-width:600px) {
                         font-size: 38px;
                     }
@@ -258,8 +261,10 @@ body {
                     letter-spacing: 0.02em;
                     color: rgba(0, 0, 0, 0.5);
                     width: 80%;
-                    animation:pulse; /* referring directly to the animation's @keyframe declaration */
-                    animation-duration: 2s; /* don't forget to set a duration! */
+                    animation: pulse;
+                    /* referring directly to the animation's @keyframe declaration */
+                    animation-duration: 2s;
+                    /* don't forget to set a duration! */
                     animation-delay: 6s;
 
                     @media(max-width:600px) {
@@ -307,12 +312,16 @@ body {
             object-fit: cover;
 
         }
-        .gallery-items img{
-            animation:fadeIn; /* referring directly to the animation's @keyframe declaration */
-            animation-duration: 1s; /* don't forget to set a duration! */
+
+        .gallery-items img {
+            animation: fadeIn;
+            /* referring directly to the animation's @keyframe declaration */
+            animation-duration: 1s;
+            /* don't forget to set a duration! */
             /* animation-delay: 5s; */
             animation-timeline: view();
-            animation-range:(cover); /* Equivalent to normal normal */
+            animation-range: (cover);
+            /* Equivalent to normal normal */
             /* animation-range: (entry 50%,cover 30%); */
         }
     }
@@ -354,6 +363,15 @@ body {
             .title {
                 margin-bottom: 30px;
                 width: 100%;
+                animation: fadeIn;
+                /* referring directly to the animation's @keyframe declaration */
+                animation-duration: 1s;
+                /* don't forget to set a duration! */
+                /* animation-delay: 5s; */
+                animation-timeline: view();
+                animation-range: (cover);
+                /* Equivalent to normal normal */
+                /* animation-range: (entry 50%,cover 30%); */
 
                 span {
                     font-family: var(--font-family);
@@ -378,6 +396,15 @@ body {
             .accordion {
                 display: flex;
                 gap: 20px;
+                animation: fadeIn;
+                /* referring directly to the animation's @keyframe declaration */
+                animation-duration: 1s;
+                /* don't forget to set a duration! */
+                /* animation-delay: 5s; */
+                animation-timeline: view();
+                animation-range: (cover);
+                /* Equivalent to normal normal */
+                /* animation-range: (entry 50%,cover 30%); */
 
                 @media(max-width:600px) {
                     gap: 10px;
@@ -494,10 +521,10 @@ body {
         }
     }
 
-    .faq{
-        width:100%;
-        height:auto;
-        padding:30px 0;
+    .faq {
+        width: 100%;
+        height: auto;
+        padding: 30px 0;
         padding-bottom: 40px;
         background-color: var(--light-color);
 
@@ -517,6 +544,15 @@ body {
                 /* background:green; */
                 .title {
                     margin-bottom: 30px;
+                    animation: fadeIn;
+                    /* referring directly to the animation's @keyframe declaration */
+                    animation-duration: 1s;
+                    /* don't forget to set a duration! */
+                    /* animation-delay: 5s; */
+                    animation-timeline: view();
+                    animation-range: (cover);
+                    /* Equivalent to normal normal */
+                    /* animation-range: (entry 50%,cover 30%); */
 
                     span {
                         font-family: var(--font-family);
@@ -542,6 +578,15 @@ body {
                     display: flex;
                     flex-direction: column;
                     gap: 20px;
+                    animation: fadeIn;
+                    /* referring directly to the animation's @keyframe declaration */
+                    animation-duration: 1s;
+                    /* don't forget to set a duration! */
+                    /* animation-delay: 5s; */
+                    animation-timeline: view();
+                    animation-range: (cover);
+                    /* Equivalent to normal normal */
+                    /* animation-range: (entry 50%,cover 30%); */
 
                     .faq-content {
                         padding: 30px;
@@ -608,11 +653,11 @@ body {
         }
     }
 
-    .blog{
-        width:100%;
-        height:auto;
+    .blog {
+        width: 100%;
+        height: auto;
         background-color: var(--light-color);
-        padding:30px 0;
+        padding: 30px 0;
 
 
         .d-flex {
@@ -621,13 +666,22 @@ body {
         }
 
         .top-title {
-                flex-direction: row;
-                justify-content: space-between;
-                gap: 30px;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 30px;
+            animation: fadeIn;
+            /* referring directly to the animation's @keyframe declaration */
+            animation-duration: 1s;
+            /* don't forget to set a duration! */
+            /* animation-delay: 5s; */
+            animation-timeline: view();
+            animation-range: (cover);
+            /* Equivalent to normal normal */
+            /* animation-range: (entry 50%,cover 30%); */
 
-                @media(max-width:600px) {
-                    flex-direction: column;
-                }
+            @media(max-width:600px) {
+                flex-direction: column;
+            }
 
             .heading-title {
                 span {
@@ -763,7 +817,7 @@ body {
         .bottom-content::-webkit-scrollbar {
             display: none;
         }
- 
+
     }
 }
 
@@ -772,7 +826,10 @@ body {
     height: auto;
     padding: 60px 0;
     background-color: var(--grey-color);
-    @media(max-width:700px){padding:30px 0;}
+
+    @media(max-width:700px) {
+        padding: 30px 0;
+    }
 
     .d-flex {
         gap: 50px;
@@ -912,10 +969,12 @@ body {
     justify-content: center;
     background-color: var(--light-color);
     top: 0;
-    animation:pulse; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 2s; /* don't forget to set a duration! */
+    animation: pulse;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s;
+    /* don't forget to set a duration! */
 }
 
 .preloader:after {
-    content:"PhotoGen";
+    content: "PhotoGen";
 }
