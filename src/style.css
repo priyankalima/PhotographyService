@@ -176,10 +176,20 @@ body {
         height: auto;
         padding: 40px 0;
 
+        .carousel{
+            @media(max-width:1000px){
+                flex-direction: column;
+            }
+        }
+
+        .carousel-container{
+
+        }
+
         .carousel-inner {}
 
         .carousel-indicators {
-            position: relative;
+            position: absolute;
             z-index: 2;
             display: flex;
             justify-content: start;
@@ -188,6 +198,11 @@ body {
             margin: 0 !important;
             margin-top: 10px !important;
             padding: 0 !important;
+            bottom: 0 !important;
+
+            @media(max-width:1000px){
+                position: relative;
+            }
 
             .active {
                 background-color: var(--secondary-color);
@@ -798,18 +813,18 @@ body {
             }
 
             .scroll-container:first-child {
-                margin-left: 6pc;
+                /* margin-left: 6pc; */
 
                 @media(max-width:600px) {
-                    margin-left: 1pc;
+                    /* margin-left: 1pc; */
                 }
             }
 
             .scroll-container:last-child {
-                margin-right: 6pc;
+                /* margin-right: 6pc; */
 
                 @media(max-width:600px) {
-                    margin-right: 1pc;
+                    /* margin-right: 1pc; */
                 }
             }
         }
@@ -824,11 +839,11 @@ body {
 .footer {
     width: 100%;
     height: auto;
-    padding: 60px 0;
+    padding-top: 60px;
     background-color: var(--grey-color);
 
-    @media(max-width:700px) {
-        padding: 30px 0;
+    @media(max-width:1000px) {
+        padding-top: 30px;
     }
 
     .d-flex {
@@ -947,6 +962,8 @@ body {
 
     .copyright {
         margin-top: 30px;
+        padding-bottom: 30px;
+        text-align: right;
 
         span {
             font-family: var(--font-family);

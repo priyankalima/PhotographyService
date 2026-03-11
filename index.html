@@ -19,12 +19,15 @@
   <!-- Main page -->
   <main class="main">
     <section class="banner">
-      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner" id="carouselInner"></div>
-        <div class="carousel-indicators">
-          <div class="container" id="carouselIndicator">
-
+      <div id="carouselExampleAutoplaying" class="carousel slide d-flex container" data-bs-ride="carousel">
+        <div class="carousel-container" style="position: relative;">
+          <div class="carousel-inner" id="carouselInner"></div>
+          <div class="carousel-indicators">
+            <div class="container" id="carouselIndicator"></div>
           </div>
+        </div>
+        <div class="right-img">
+            <img src="./src/assets/banner-img.svg">
         </div>
       </div>
       <script>
@@ -32,25 +35,22 @@
           {
             "title": "Photography leading the beauty of moments",
             "text": "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum",
-            "img": "/src/assets/banner-img.svg"
+            "img": "./src/assets/banner-img.svg"
           },
           {
             "title": "Capture high quality for your experience",
             "text": "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum",
-            "img": "/src/assets/banner-img.svg"
+            "img": "./src/assets/banner-img.svg"
           }
         ]
 
         carouselData.forEach((item, i) => {
           carouselInner.innerHTML += `
                 <div class="carousel-item">
-                  <div class="container d-flex">
+                  <div class="container">
                       <div class="left-content">
                           <span class="title"> ${item.title}</span>
                           <span class="text">${item.text}</span>
-                      </div>
-                      <div class="right-img">
-                          <img src=${item.img}>
                       </div>
                     </div>
                 </div>
@@ -287,7 +287,7 @@
   <!-- Footer -->
   <footer id="footer" class="footer"></footer>
   <!-- Javascript -->
-  <script src="/src/script.js"></script>
+  <script src="./src/script.js"></script>
 </body>
 
 </html>
