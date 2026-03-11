@@ -178,7 +178,8 @@ body {
 
         .carousel{
             @media(max-width:1000px){
-                flex-direction: column;
+                flex-direction: column-reverse;
+                gap:20px;
             }
         }
 
