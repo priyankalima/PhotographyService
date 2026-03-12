@@ -186,6 +186,11 @@ body {
         .carousel-container{
 
         }
+        .banner-img{
+                @media(max-width:1000px){
+                    width: 100%;
+                }
+            }
 
         .carousel-inner {}
 
@@ -289,7 +294,9 @@ body {
                 }
             }
 
-            /* .right-img{ width:30%;} */
+            .right-img{
+            
+            }
         }
     }
 
