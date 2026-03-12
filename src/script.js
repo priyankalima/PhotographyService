@@ -52,9 +52,9 @@ footer.append(
                     "logo": "",
                     "para": "Lorem ipsum dolor sit amet,conscecter adiscipcing alit,sed do eiusmode tempor incididunt",
                     "address": [
-                        "HSR Layout,KA,298007,Ka,India",
+                        "Collifornia, USA",
                         "+91 000-3456-23456",
-                        "contact@areta.in"
+                        "contact@photogen.com"
                     ],
                     "links": [
                         "About",

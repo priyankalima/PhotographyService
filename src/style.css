@@ -139,7 +139,7 @@ body {
             }
         }
 
-        @media(max-width:700px) {
+        @media(max-width:1000px) {
             flex-direction: column;
             background-color: #f2f2f2;
             justify-content: center;
@@ -244,7 +244,7 @@ body {
                 align-items: center;
                 gap: 20px;
 
-                @media(max-width:700px) {
+                @media(max-width:1000px) {
                     flex-direction: column-reverse;
 
                     img {
@@ -270,7 +270,7 @@ body {
                     /* don't forget to set a duration! */
                     animation-delay: 5s;
 
-                    @media(max-width:600px) {
+                    @media(max-width:1000px) {
                         font-size: 38px;
                     }
                 }
@@ -288,7 +288,7 @@ body {
                     /* don't forget to set a duration! */
                     animation-delay: 6s;
 
-                    @media(max-width:600px) {
+                    @media(max-width:1000px) {
                         width: 100%;
                     }
                 }
@@ -360,7 +360,7 @@ body {
             gap: 30px;
             align-items: center;
 
-            @media(max-width:600px) {
+            @media(max-width:1000px) {
                 flex-direction: column;
             }
         }
@@ -368,7 +368,7 @@ body {
         .left-img {
 
             img {
-                @media(max-width:600px) {
+                @media(max-width:1000px) {
                     width: 100%;
                     display: none;
                 }
@@ -402,7 +402,7 @@ body {
                     font-size: 48px;
                     letter-spacing: 0.02em;
 
-                    @media(max-width:600px) {
+                    @media(max-width:1000px) {
                         font-size: 32px;
                     }
                 }
@@ -429,7 +429,7 @@ body {
                 /* Equivalent to normal normal */
                 /* animation-range: (entry 50%,cover 30%); */
 
-                @media(max-width:600px) {
+                @media(max-width:1000px) {
                     gap: 10px;
                 }
 
@@ -554,7 +554,7 @@ body {
         .d-flex {
             gap: 30px;
 
-            @media(max-width:600px) {
+            @media(max-width:1000px) {
                 flex-direction: column;
             }
         }
@@ -583,7 +583,7 @@ body {
                         font-size: 48px;
                         letter-spacing: 0.02em;
 
-                        @media(max-width:600px) {
+                        @media(max-width:1000px) {
                             font-size: 32px;
                         }
                     }
@@ -668,7 +668,7 @@ body {
         }
 
         .right-img {
-            @media(max-width:600px) {
+            @media(max-width:1000px) {
                 img {
                     display: none;
                 }
@@ -773,7 +773,7 @@ body {
                     height: 450px;
                     object-fit: cover;
 
-                    @media(max-width:600px) {
+                    @media(max-width:1000px) {
                         width: 300px;
                         height: 350px;
                     }
@@ -785,7 +785,7 @@ body {
                     height: 450px;
                     background: linear-gradient(179deg, rgba(23, 23, 23, 0.05) 0%, rgba(23, 23, 23, 0.86) 93.4%);
 
-                    @media(max-width:600px) {
+                    @media(max-width:1000px) {
                         width: 300px;
                         height: 350px;
                     }
@@ -823,7 +823,7 @@ body {
             .scroll-container:first-child {
                 /* margin-left: 6pc; */
 
-                @media(max-width:600px) {
+                @media(max-width:1000px) {
                     /* margin-left: 1pc; */
                 }
             }
@@ -831,7 +831,7 @@ body {
             .scroll-container:last-child {
                 /* margin-right: 6pc; */
 
-                @media(max-width:600px) {
+                @media(max-width:1000px) {
                     /* margin-right: 1pc; */
                 }
             }
@@ -875,7 +875,7 @@ body {
                 letter-spacing: 0.02em;
                 color: #0e0e0e;
 
-                @media(max-width:600px) {
+                @media(max-width:1000px) {
                     font-size: 32px;
                 }
             }
